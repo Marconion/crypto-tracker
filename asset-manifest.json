@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/crypto-tracker/static/css/main.b3442f11.css",
+    "main.js": "/crypto-tracker/static/js/main.336e6e9c.js",
+    "static/js/453.f6845b8c.chunk.js": "/crypto-tracker/static/js/453.f6845b8c.chunk.js",
+    "static/media/logo-transparent-png.png": "/crypto-tracker/static/media/logo-transparent-png.f67acf08d41c3e6f2222.png",
+    "static/media/bitcoin.png": "/crypto-tracker/static/media/bitcoin.995f1e672a3552f02c3b.png",
+    "static/media/tether.png": "/crypto-tracker/static/media/tether.ae1267bcdb4121dbf8e0.png",
+    "static/media/ethereum.png": "/crypto-tracker/static/media/ethereum.1608a8a87b63084f5db9.png",
+    "static/media/bnb.png": "/crypto-tracker/static/media/bnb.2c62037b081c5b3fb38f.png",
+    "static/media/solana.png": "/crypto-tracker/static/media/solana.22e2f1f574c1e45754dc.png",
+    "index.html": "/crypto-tracker/index.html",
+    "main.b3442f11.css.map": "/crypto-tracker/static/css/main.b3442f11.css.map",
+    "main.336e6e9c.js.map": "/crypto-tracker/static/js/main.336e6e9c.js.map",
+    "453.f6845b8c.chunk.js.map": "/crypto-tracker/static/js/453.f6845b8c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3442f11.css",
+    "static/js/main.336e6e9c.js"
+  ]
+}
