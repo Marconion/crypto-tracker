@@ -1,7 +1,15 @@
-import { Grid } from "@mui/material";
+import styled from "@emotion/styled";
+import { Button, Grid } from "@mui/material";
 import React from "react";
 
 export const LogoTitle = (props) => {
+  const LogoButton = styled(Button)({
+    backgroundColor: "transparent",
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
+  });
+
   return (
     <div>
       <Grid
@@ -9,9 +17,10 @@ export const LogoTitle = (props) => {
         alignItems={"center"}
         justifyContent={"space-around"}
         className="logo-anim">
-        <img src={props.logoImg} className="logo-img" alt="logo" />
+        <LogoButton disableRipple>
+          <img src={props.logoImg} className="logo-img" alt="logo" />
+        </LogoButton>
       </Grid>
-      {/* <h1>Coin Market Tracker</h1> */}
       <div>
         <p style={{ fontSize: "2rem" }} className="coin-title ">
           Coins

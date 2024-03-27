@@ -84,7 +84,7 @@ function App() {
               </React.Fragment>
             );
           })}
-          <StocksFetch />
+          {/* <StocksFetch /> */}
           <p className="greyed-text">
             * prices automatically updates every 120 seconds <br />* you can
             manually update prices by clicking the button below

@@ -33,13 +33,12 @@ h3 {
   }
 }
 
-.logo-anim:hover {
-  transform: scale(1.1);
-}
-
 .logo-img {
   width: 200px;
-  /* margin: 5px; */
+  transition: transform 0.2s ease-in-out;
+}
+.logo-img:active {
+  transform: scale(0.95);
 }
 
 .coin-title {
@@ -51,18 +50,6 @@ h3 {
   border: 2px solid #638b8e;
   border-radius: 10px;
 }
-
-/* @keyframes Pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
 
 .greyed-text {
   color: rgb(198, 198, 198);
