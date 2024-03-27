@@ -11,12 +11,10 @@ export const StyledButton = styled(Button)({
   color: "black",
   backgroundColor: "lightblue",
   "&:hover": {
-    backgroundColor: "lightgreen",
+    backgroundColor: "lightblue",
   },
-  "@media (hover: none)": {
-    "&:hover": {
-      backgroundColor: "lightblue",
-    },
+  "&:active": {
+    backgroundColor: "lightgreen",
   },
 });
 

@@ -19,12 +19,22 @@ h3 {
   padding: 10px;
 }
 
-.greyed-text {
-  color: rgb(198, 198, 198);
-  text-align: center;
-  opacity: 0.4;
-  font-size: 0.8rem;
-  font-style: italic;
+.logo-anim {
+  animation: App-logo-scale 1s linear;
+  transition: all 0.3s ease-in-out;
+}
+@keyframes App-logo-scale {
+  from {
+    transform: rotateX(90deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.logo-anim:hover {
+  transform: scale(1.1);
 }
 
 .logo-img {
@@ -37,8 +47,29 @@ h3 {
   font-size: 2rem;
   margin: 20px 0 20px 0;
   color: #b1f9fe;
+  background-color: rgba(99, 139, 142, 0.2);
   border: 2px solid #638b8e;
   border-radius: 10px;
+}
+
+/* @keyframes Pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+.greyed-text {
+  color: rgb(198, 198, 198);
+  text-align: center;
+  opacity: 0.4;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .box {
