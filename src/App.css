@@ -25,20 +25,23 @@ h3 {
 }
 @keyframes App-logo-scale {
   from {
+    filter: blur(5px);
     transform: rotateX(90deg);
   }
 
   to {
+    filter: blur(0px);
     transform: rotateX(0deg);
   }
 }
 
 .logo-img {
   width: 200px;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .logo-img:active {
   transform: scale(0.95);
+  filter: blur(5px);
 }
 
 .coin-title {
