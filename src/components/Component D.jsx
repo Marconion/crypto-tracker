@@ -13,6 +13,11 @@ export const StyledButton = styled(Button)({
   "&:hover": {
     backgroundColor: "lightgreen",
   },
+  "@media (hover: none)": {
+    "&:hover": {
+      backgroundColor: "lightblue",
+    },
+  },
 });
 
 function ComponentD() {

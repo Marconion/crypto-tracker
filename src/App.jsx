@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NameContext } from "./contexts/NameContext";
 import { DataContext } from "./contexts/DataContext";
 import { Grid, Stack } from "@mui/material";
@@ -9,10 +9,13 @@ import ComponentD from "./components/Component D";
 import { icons } from "./components/images";
 import { logoImage } from "./components/images";
 import { Footer } from "./components/Footer";
+import { LogoTitle } from "./components/LogoTitle";
+import { StocksFetch } from "./components/StocksFetch";
 
 function App() {
   const [name, setName] = useState("Marko");
   const [data, setData] = useState([]); // [1, 2, 3, 4, 5
+  const [data2, setData2] = useState([]);
 
   useEffect(() => {
     fetch(`https://api.coincap.io/v2/assets`)
@@ -36,40 +39,29 @@ function App() {
     <NameContext.Provider value={[name, setName]}>
       <DataContext.Provider value={[data, setData]}>
         <div className="box">
-          <Grid
-            container
-            spacing={2}
-            alignItems={"center"}
-            justifyContent={"space-around"}>
-            <img src={logoImage} className="logo-img" alt="logo" />
-          </Grid>
-          {/* <h1>Coin Market Tracker</h1> */}
-          <p style={{ fontSize: "2rem" }} className="coin-title">
-            Coins
-          </p>
+          <LogoTitle logoImg={logoImage} />
 
           {data.map((coin, index) => {
             const price = coin.priceUsd;
             const percentChng = coin.changePercent24Hr;
             return (
-              <>
+              <React.Fragment key={coin.name}>
                 <Stack spacing={2} paddingY={1.7} direction="row">
                   <Grid container alignItems={"center"} width={"20px"}>
                     {index + 1}.
                   </Grid>
-                  <Grid container spacing={2} alignItems={"center"}>
+                  <Grid container width={"300px"} alignItems={"center"}>
                     <img
                       src={icons[index]}
                       alt={coin.name}
                       style={{
-                        width: "20px",
+                        width: "15px",
                       }}
                     />
                     {coin.name}
                   </Grid>
                   <Grid
                     container
-                    spacing={2}
                     alignItems={"center"}
                     style={{
                       display: "flex",
@@ -79,7 +71,6 @@ function App() {
                   </Grid>
                   <Grid
                     container
-                    spacing={2}
                     alignItems={"center"}
                     style={{ display: "flex", justifyContent: "flex-end" }}>
                     {parseFloat(percentChng).toFixed(2)}%
@@ -90,9 +81,10 @@ function App() {
                     )}
                   </Grid>
                 </Stack>
-              </>
+              </React.Fragment>
             );
           })}
+          {/* <StocksFetch /> */}
           <p className="greyed-text">
             * prices automatically updates every 120 seconds <br />* you can
             manually update prices by clicking the button below
