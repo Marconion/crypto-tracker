@@ -39,11 +39,7 @@ function App() {
       <DataContext.Provider value={[data, setData]}>
         <div className="box">
           <LogoTitle logoImg={logoImage} />
-          <Stack
-            spacing={2}
-            paddingY={1.7}
-            direction="column"
-            style={{ minHeight: "330px" }}>
+          <Stack direction="column" style={{ minHeight: "300px" }}>
             {data.map((coin, index) => {
               const price = coin.priceUsd;
               const percentChng = coin.changePercent24Hr;
