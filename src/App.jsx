@@ -15,7 +15,6 @@ import { StocksFetch } from "./components/StocksFetch";
 function App() {
   const [name, setName] = useState("Marko");
   const [data, setData] = useState([]); // [1, 2, 3, 4, 5
-  const [data2, setData2] = useState([]);
 
   useEffect(() => {
     fetch(`https://api.coincap.io/v2/assets`)
@@ -40,50 +39,55 @@ function App() {
       <DataContext.Provider value={[data, setData]}>
         <div className="box">
           <LogoTitle logoImg={logoImage} />
-
-          {data.map((coin, index) => {
-            const price = coin.priceUsd;
-            const percentChng = coin.changePercent24Hr;
-            return (
-              <React.Fragment key={coin.name}>
-                <Stack spacing={2} paddingY={1.7} direction="row">
-                  <Grid container alignItems={"center"} width={"20px"}>
-                    {index + 1}.
-                  </Grid>
-                  <Grid container width={"300px"} alignItems={"center"}>
-                    <img
-                      src={icons[index]}
-                      alt={coin.name}
+          <Stack
+            spacing={2}
+            paddingY={1.7}
+            direction="column"
+            style={{ minHeight: "330px" }}>
+            {data.map((coin, index) => {
+              const price = coin.priceUsd;
+              const percentChng = coin.changePercent24Hr;
+              return (
+                <React.Fragment key={coin.name}>
+                  <Stack spacing={2} paddingY={1.7} direction="row">
+                    <Grid container alignItems={"center"} width={"20px"}>
+                      {index + 1}.
+                    </Grid>
+                    <Grid container width={"300px"} alignItems={"center"}>
+                      <img
+                        src={icons[index]}
+                        alt={coin.name}
+                        style={{
+                          width: "15px",
+                        }}
+                      />
+                      {coin.name}
+                    </Grid>
+                    <Grid
+                      container
+                      alignItems={"center"}
                       style={{
-                        width: "15px",
-                      }}
-                    />
-                    {coin.name}
-                  </Grid>
-                  <Grid
-                    container
-                    alignItems={"center"}
-                    style={{
-                      display: "flex",
-                      justifyContent: "flex-end",
-                    }}>
-                    {parseFloat(price).toFixed(2)} $
-                  </Grid>
-                  <Grid
-                    container
-                    alignItems={"center"}
-                    style={{ display: "flex", justifyContent: "flex-end" }}>
-                    {parseFloat(percentChng).toFixed(2)}%
-                    {percentChng > 0 ? (
-                      <ArrowDropUpIcon style={{ color: "green" }} />
-                    ) : (
-                      <ArrowDropDownIcon style={{ color: "red" }} />
-                    )}
-                  </Grid>
-                </Stack>
-              </React.Fragment>
-            );
-          })}
+                        display: "flex",
+                        justifyContent: "flex-end",
+                      }}>
+                      {parseFloat(price).toFixed(2)} $
+                    </Grid>
+                    <Grid
+                      container
+                      alignItems={"center"}
+                      style={{ display: "flex", justifyContent: "flex-end" }}>
+                      {parseFloat(percentChng).toFixed(2)}%
+                      {percentChng > 0 ? (
+                        <ArrowDropUpIcon style={{ color: "green" }} />
+                      ) : (
+                        <ArrowDropDownIcon style={{ color: "red" }} />
+                      )}
+                    </Grid>
+                  </Stack>
+                </React.Fragment>
+              );
+            })}
+          </Stack>
           {/* <StocksFetch /> */}
           <p className="greyed-text">
             * prices automatically updates every 120 seconds <br />* you can
