@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/crypto-tracker/static/css/main.8c6caf72.css",
-    "main.js": "/crypto-tracker/static/js/main.981d10a2.js",
+    "main.css": "/crypto-tracker/static/css/main.d6af788a.css",
+    "main.js": "/crypto-tracker/static/js/main.d177fe8a.js",
     "static/media/logo-transparent-png.png": "/crypto-tracker/static/media/logo-transparent-png.f67acf08d41c3e6f2222.png",
     "static/media/bitcoin.png": "/crypto-tracker/static/media/bitcoin.995f1e672a3552f02c3b.png",
     "static/media/tether.png": "/crypto-tracker/static/media/tether.ae1267bcdb4121dbf8e0.png",
@@ -10,11 +10,11 @@
     "static/media/solana.png": "/crypto-tracker/static/media/solana.22e2f1f574c1e45754dc.png",
     "static/media/ibm.svg": "/crypto-tracker/static/media/ibm.c23ce09aef14ac5520460b4ecb5d5344.svg",
     "index.html": "/crypto-tracker/index.html",
-    "main.8c6caf72.css.map": "/crypto-tracker/static/css/main.8c6caf72.css.map",
-    "main.981d10a2.js.map": "/crypto-tracker/static/js/main.981d10a2.js.map"
+    "main.d6af788a.css.map": "/crypto-tracker/static/css/main.d6af788a.css.map",
+    "main.d177fe8a.js.map": "/crypto-tracker/static/js/main.d177fe8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c6caf72.css",
-    "static/js/main.981d10a2.js"
+    "static/css/main.d6af788a.css",
+    "static/js/main.d177fe8a.js"
   ]
 }
