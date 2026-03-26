@@ -23,7 +23,7 @@ function ComponentD() {
   const [data, setData] = useContext(DataContext);
 
   function handleClick() {
-    fetch(`https://api.coincap.io/v2/assets`)
+    fetch(`https://rest.coincap.io/v3/assets`)
       .then((response) => response.json())
       .then((data) => {
         setData(data.data.slice(0, 5));

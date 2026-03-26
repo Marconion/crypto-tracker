@@ -6,7 +6,8 @@ body {
 }
 
 h1 {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
   color: #b1f9fe;
@@ -19,8 +20,26 @@ h3 {
   padding: 10px;
 }
 
+.note p {
+  font-size: 11px;
+  line-height: 25px;
+}
+
+.info-anim {
+  animation: Info-anim 1s linear;
+  transition: all 0.2s ease-in-out;
+}
+@keyframes Info-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .logo-anim {
-  animation: App-logo-scale 1s linear;
+  animation: App-logo-scale 0.75s linear;
   transition: all 0.3s ease-in-out;
 }
 @keyframes App-logo-scale {
@@ -47,7 +66,8 @@ h3 {
 .coin-title {
   text-align: center;
   font-size: 2rem;
-  margin: 20px 0 20px 0;
+  margin: 20px 0;
+  padding-bottom: 3px;
   color: #b1f9fe;
   background-color: rgba(99, 139, 142, 0.2);
   border: 2px solid #638b8e;
@@ -85,9 +105,15 @@ img {
   align-items: center;
 }
 
+.login-page {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
 footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .divider {

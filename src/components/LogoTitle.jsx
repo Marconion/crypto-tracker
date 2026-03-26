@@ -21,11 +21,6 @@ export const LogoTitle = (props) => {
           <img src={props.logoImg} className="logo-img" alt="logo" />
         </LogoButton>
       </Grid>
-      <div>
-        <p style={{ fontSize: "2rem" }} className="coin-title ">
-          Coins
-        </p>
-      </div>
     </div>
   );
 };
